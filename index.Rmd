@@ -1,0 +1,190 @@
+--- 
+title: "HDAT9400 Summary"
+author: "Annie Li"
+date: "01/10/2022"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib, packages.bib]
+# url: your book url like https://bookdown.org/yihui/bookdown
+# cover-image: path to the social sharing image like images/cover.jpg
+description: |
+  This is a minimal example of using the bookdown package to write a book.
+  The HTML output format for this example is bookdown::gitbook,
+  set in the _output.yml file.
+link-citations: yes
+github-repo: rstudio/bookdown-demo
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(kableExtra)
+```
+
+# About
+
+This is the summary GitBook for HDAT9400 Edition 1. 
+
+## Week 1
+#### Health Data Definition
+* Data gathered through
+  + running healthcare system
+  + providing health services
+  + conducting health research
+* Mostly generated and collected as routinely collected data without pre-defined research question split into 
+  + administrative
+  + clinical data
+  
+\vspace{10pt}
+
+#### Research Data Definition
+* Data in various forms (facts, observations, images, computer program results, recordings, measurements, experiences) based on 
+ + argument,theory, test, hypothesis etc
+* Incorporates data generated, collected, used, produced
+* Can be raw, processed and stored in any format or media
+
+\vspace{10pt}
+
+#### Metadata Definition
+* Data about data
+* Provides descriptions, content and context
+
+#### Clinical terminologies
+* common language shared by clinicans
+  + SNOMED-CT-AM
+  + ICD-11-AM
+
+\vspace{10pt}
+
+#### Classification
+* split into categories with similar attributes for casemix reporting or funding
+
+\vspace{10pt}
+
+#### Data Element Definition
+* Data Structure
+
+\vspace{10pt}
+
+#### Data Journey
+* Collected during health visit
+* Abstracted and recoded 
+* Entered into select registeries if applicable
+* Entered into hospital database and grouped for reporting/funding
+* Information collated into central database, cleaned and validated
+* Data extracted and submitted into jurisdictional hospital morbidity data collection
+* Combined and linked to create final national wide dataset e.g. National Hospital Morbidity Data Collection
+
+\vspace{10pt}
+
+#### Primary Data Definition
+* Used for the purposed for which they were originally collected
+
+\vspace{10pt}
+
+#### Secondary Data Definition
+* Collected/processed/analysed by someone else other than the primary data collector for purpose other than the purpose the dataset was intially intended for
+
+\vspace{10pt}
+
+#### Routinely Collected Data Definition
+* Collected routinely by governments, healthcare providers and insures for
+  + meeting regulatory purposes (e.g. registry of births, deaths; motor vehicle registrations)
+  + administering programs (health, education, social security)
+  + meeting legislative requirements (e.g. taxation declarations)
+  + monitoring purposes (e.g. communicable disease notifications, perinatal data)
+  + as a by-product of transactions
+* Information of these datasets are found [Routinely Collected Data](https://www.cherel.org.au/data-dictionaries#section1)
+* Other datasets
+  + National Hospital Morbidity Database (NHMD)
+    - collection of electronic confidentialised summary records for admitted patients separated in public and private hospitals [NHMD](https://www.aihw.gov.au/about-our-data/our-data-collections/national-hospitals-data-collection)
+  + National Mortality Database (NMD) and National Death Index (NDI)          - NMD contains cause of death information for all deaths registered in Australia. 
+    - NDI data contains records of all deaths occurring in Australia (fact of death). [NDI](https://www.aihw.gov.au/about-our-data/our-data-collections/national-mortality-database)
+  + National Hospital Cost Data Collection (NHCDC)    
+    - provide retrospective, detailed cost weights for admitted acute patient services, and summary information on subacute care, emergency departments and non-admitted clinics
+    - guides the national implementation of activity based funding (ABF) for public hospital services.
+      * Contains the average costs and cost weights for each Diagnosis Related Group (DRG) 
+  + Pharmaceutical Benefits Scheme (PBS) is a record on Commonwealth subsidised claims for prescribed medicines listed on the Schedule of Pharmaceutical Benefits
+    - includes PBS item number for pharmaceuticals supplied, an Anatomical Therapeutic Chemical (ATC) code, date of medication prescribed, date supplied, patient’s concessional status and pharmacists postcode.
+  + Medicare Benefits Schedule (MBS) contains information about claims made by patients for medical services that are reimbursable under Medicare (general GP consultations, diagnostic tests and pathology services)
+    - include the date of the service, the Item Number for the service, patient age, gender and postcode, provider business code, the amount charged by the provider, the Medicare benefit for the service, the method of payment and de-identified information relating to the provider
+
+\vspace{10pt}
+
+#### Strength and Limitations of Administrative Datasets
+
+```{r, table, include=TRUE, echo=FALSE, eval= TRUE}
+table <- data.frame(Strengths = c("Comprehensive dataset, suitable for research of rare outcomes", "Contains agreed and mandated minimum dataset requirements", "Automatic collection, with systems in place for its collection; assembly and cleaning", "Data Linkage within a dataset or between datasets allows assembly of cohorts and long-term follow up to facilitate better causal inference", "No collection costs, costs are only associated with data extraction and linkage", "Captures those who may not respond to surveys", "Available for research proposes pending approvals", "Potential for datasets to be linked to produce powerful research resources"), Weakness = c("Data generated as a result of an event, in the absence of event will result in missing data", "Metadata and data dictionaries may not be pubicly available", "contain limited information about key confounding variables and risk factors", "unknown validity", "Information collected vary between times", "Not designed for research, lack of control of collection methods", "Data access pending approval by data custodians", "Bias may be introduced through data linkage"))
+table %>%
+  kbl() %>%
+  kable_paper(bootstrap_options = c("hover", "condensed", "striped"), full_width = F) %>%
+  column_spec(1, width = "35em", border_right = T, border_left = T) %>%
+  column_spec(2, width = "35em", border_right = T)
+  
+
+
+  
+```
+
+\vspace{10pt}
+
+#### Administrative Data Definition
+* A subset of routinely collected data that was collected primarily for administrative (not research) purposes
+
+\vspace{10pt}
+
+#### Registeries
+* central repository of information that is notified when certain diseases or conditions of interests are diagnosed
+[Compilation of clinical quality registers](https://www.monash.edu/medicine/sphpm/registries)
+* essential health information stored is provided by the system of vital registrations
+
+\vspace{10pt}
+
+#### Cohort Longitudinal Studies
+* Studies which followed a group of people over a period of time
+
+\vspace{10pt}
+
+#### Census and population surveys
+* Conducted every 5 years to accurately measure the number of inhabitants, their characteristics and dwellings
+* Used in research for
+  + population counts
+  + produce standardised or unstandardised rates of outcome of interest\
+  + produce Socio-Economic Indexes for Areas (SEIFA)
+* Population health survey is conducted by each state and territory
+  + collects ongoing information about health behaviours, health status and other factors that influence the health of the people
+
+
+
+
+
+## Render book
+
+You can render the HTML version of this example book without changing anything:
+
+1. Find the **Build** pane in the RStudio IDE, and
+
+1. Click on **Build Book**, then select your output format, or select "All formats" if you'd like to use multiple formats from the same book source files.
+
+Or build the book from the R console:
+
+```{r, eval=FALSE}
+bookdown::render_book()
+```
+
+To render this example to PDF as a `bookdown::pdf_book`, you'll need to install XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): <https://yihui.org/tinytex/>.
+
+## Preview book
+
+As you work, you may start a local server to live preview this HTML book. This preview will update as you edit the book when you save individual .Rmd files. You can start the server in a work session by using the RStudio add-in "Preview book", or from the R console:
+
+```{r eval=FALSE}
+bookdown::serve_book()
+```
+
+
+```{r include=FALSE}
+# automatically create a bib database for R packages
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+), 'packages.bib')
+```
