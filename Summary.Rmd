@@ -1,0 +1,78 @@
+---
+title: "HDAT9400_Notes"
+author: "Annie Li"
+date: '2022-09-30'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Health Data Definition
+* Data gathered through
+  + running healthcare system
+  + providing health services
+  + conducting health research
+* Mostly generated and collected as routinely collected data without pre-defined research question split into 
+  + administrative
+  + clinical data
+  
+\vspace{10pt}
+
+# Research Data Definition
+* Data in various forms (facts, observations, images, computer program results, recordings, measurements, experiences) based on 
+ + argument,theory, test, hypothesis etc
+* Incorporates data generated, collected, used, produced
+* Can be raw, processed and stored in any format or media
+
+\vspace{10pt}
+
+# Metadata Definition
+* Data about data
+* Provides descriptions, content and context
+
+# Clinical terminologies
+* common language shared by clinicans
+  + SNOMED-CT-AM
+  + ICD-11-AM
+
+# Classification
+* split into categories with similar attributes for casemix reporting or funding
+
+# Data Element Definition
+* Data Structure
+
+# Data Journey
+* Collected during health visit
+* Abstracted and recoded 
+* Entered into select registeries if applicable
+* Entered into hospital database and grouped for reporting/funding
+* Information collated into central database, cleaned and validated
+* Data extracted and submitted into jurisdictional hospital morbidity data collection
+* Combined and linked to create final national wide dataset e.g. National Hospital Morbidity Data Collection
+
+# Primary Data Definition
+* Used for the purposed for which they were originally collected
+
+# Secondary Data Definition
+* Collected/processed/analysed by someone else other than the primary data collector for purpose other than the purpose the dataset was intially intended for
+
+# Routinely Collected Data Definition
+* Collected routinely by governments, healthcare providers and insures for
+  + meeting regulatory purposes (e.g. registry of births, deaths; motor vehicle registrations)
+  + administering programs (health, education, social security)
+  + meeting legislative requirements (e.g. taxation declarations)
+  + monitoring purposes (e.g. communicable disease notifications, perinatal data)
+  + as a by-product of transactions
+  
+# Administrative Data Definition
+* A subset of routinely collected data that was collected primarily for administrative (not research) purposes
+
+# Registeries
+* central repository of information that is notified when certain diseases or conditions of interests are diagnosed
+[Compilation of clinical quality registers](https://www.monash.edu/medicine/sphpm/registries)
+* essential health information stored is provided by the system of vital registrations
+
+# Cohort Longitudinal Studies
+
